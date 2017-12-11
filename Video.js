@@ -24,6 +24,14 @@ export default class Video extends Component {
     this._root.setNativeProps(nativeProps);
   }
 
+  play = () => {
+    this.setNativeProps({ paused: false });
+  };
+
+  stop = () => {
+    this.setNativeProps({ paused: true });
+  };
+
   seek = (time) => {
     this.setNativeProps({ seek: time });
   };
